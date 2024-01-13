@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-source-serif-pro: "Source Serif Pro";
+  --font-abril-fatface: "Abril Fatface";
+  --font-inter: Inter;
+  --font-dela-gothic-one: "Dela Gothic One";
+  --font-tt-commons: "TT Commons";
+
+  /* font sizes */
+  --font-size-xl: 20px;
+  --font-size-5xl: 24px;
+  --font-size-11xl: 30px;
+  --font-size-6xl: 25px;
+  --font-size-base: 16px;
+
+  /* Colors */
+  --morecream: #949494;
+  --maincolorblue: #0b253c;
+  --color-black: #000;
+  --white-blacken-blend: #d9d9d9;
+  --blue2nd: #30475c;
+  --test: #283b4d;
+  --line-colour: #332f2f;
+  --color-white: #fff;
+  --linecolorwhite: #9e9e9e;
+  --creamgakla: #616060;
+
+  /* Border radiuses */
+  --br-mini: 15px;
+}

@@ -1,0 +1,465 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: url('image.png') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  font-family: 'Source Serif Pro', serif;
+  
+  
+ 
+  
+}
+#top-bar {
+  background-color: #0B253C;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  height: 91px;
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+}
+
+.image-container img {
+  max-width: 100px; /* Adjust the width as needed */
+  height: auto;
+  margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.image-text {
+  color: white;
+}
+
+
+
+
+
+h4{
+  margin-left: 90px;
+  margin-top: 50px;
+}
+h1{
+  margin-left: 90px;
+}
+.menu-container {
+          position: relative;
+          
+      }
+.menu{
+  
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color: rgb(40, 60, 77, 0.5);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 90px;
+  
+  
+}
+
+.dropdown {
+font-size: 25px;
+font-weight: bold;
+  position: relative;
+  padding: 20px;
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center the content horizontally */
+  color: black;
+  background-color: #D9D9D9;
+  width: 65%;
+  border-radius: 290px;
+  
+}
+
+
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  
+  padding: 10px;
+  z-index: 1;
+  width: 90%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.dropdown.active {
+  z-index: 2;
+}
+.dropdown.active .dropdown-content {
+  display: block;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+}
+
+input {
+  margin-bottom: 12px;
+  padding: 8px;
+}
+footer {
+  font-weight: bolder;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 14px;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 999;
+}
+
+img {
+max-width: 100%;
+display: block;
+
+}
+
+.container {
+max-width: 99vw;
+margin: 15px auto;
+padding: 0 15px;
+}
+
+.top-text-wrapper {
+
+text-align: center;
+margin: 20px 0 30px 0;
+}
+
+.top-text-wrapper h4 {
+font-size: 24px;
+margin-bottom: 10px;
+}
+
+.top-text-wrapper code {
+font-size: 0.85em;
+background: linear-gradient(90deg, #fce3ec, #ffe8cc);
+color: #ff2200;
+padding: 0.1rem 0.3rem 0.2rem;
+border-radius: 0.2rem;
+}
+
+.tab-section-wrapper {
+padding: 30px 0;
+}
+
+.grid-wrapper {
+display: grid;
+grid-gap: 30px;
+place-items: center;
+place-content: center;
+}
+
+.grid-col-auto {
+grid-auto-flow: column;
+grid-template-rows: auto;
+}
+
+/* ******************* Main Styeles : Radio Card */
+label.radio-card {
+cursor: pointer;
+}
+label.radio-card .card-content-wrapper {
+background: #283C4D;
+border-radius: 5px;
+max-width: 280px;
+height: 490px;
+padding: 15px;
+display: grid;
+box-shadow: 0 2px 4px 0 rgba(219, 215, 215, 0.04);
+transition: 200ms linear;
+}
+label.radio-card .check-icon {
+width: 20px;
+height: 20px;
+display: inline-block;
+border: solid 2px #e3e3e3;
+border-radius: 50%;
+transition: 200ms linear;
+position: relative;
+}
+label.radio-card .check-icon:before {
+content: "";
+position: absolute;
+inset: 0;
+background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.93552 4.58423C0.890286 4.53718 0.854262 4.48209 0.829309 4.42179C0.779553 4.28741 0.779553 4.13965 0.829309 4.00527C0.853759 3.94471 0.889842 3.88952 0.93552 3.84283L1.68941 3.12018C1.73378 3.06821 1.7893 3.02692 1.85185 2.99939C1.91206 2.97215 1.97736 2.95796 2.04345 2.95774C2.11507 2.95635 2.18613 2.97056 2.2517 2.99939C2.31652 3.02822 2.3752 3.06922 2.42456 3.12018L4.69872 5.39851L9.58026 0.516971C9.62828 0.466328 9.68554 0.42533 9.74895 0.396182C9.81468 0.367844 9.88563 0.353653 9.95721 0.354531C10.0244 0.354903 10.0907 0.369582 10.1517 0.397592C10.2128 0.425602 10.2672 0.466298 10.3112 0.516971L11.0651 1.25003C11.1108 1.29672 11.1469 1.35191 11.1713 1.41247C11.2211 1.54686 11.2211 1.69461 11.1713 1.82899C11.1464 1.88929 11.1104 1.94439 11.0651 1.99143L5.06525 7.96007C5.02054 8.0122 4.96514 8.0541 4.90281 8.08294C4.76944 8.13802 4.61967 8.13802 4.4863 8.08294C4.42397 8.0541 4.36857 8.0122 4.32386 7.96007L0.93552 4.58423Z' fill='white'/%3E%3C/svg%3E%0A");
+background-repeat: no-repeat;
+background-size: 12px;
+background-position: center center;
+transform: scale(1.6);
+transition: 200ms linear;
+opacity: 0;
+}
+label.radio-card input[type=radio] {
+appearance: none;
+-webkit-appearance: none;
+-moz-appearance: none;
+}
+label.radio-card input[type=radio]:checked + .card-content-wrapper {
+box-shadow: 0 2px 4px 0 rgba(219, 215, 215, 0.5), 0 0 0 2px #3057d5;
+}
+label.radio-card input[type=radio]:checked + .card-content-wrapper .check-icon {
+background: #3057d5;
+border-color: #3057d5;
+transform: scale(1.2);
+}
+label.radio-card input[type=radio]:checked + .card-content-wrapper .check-icon:before {
+transform: scale(1);
+opacity: 1;
+}
+label.radio-card input[type=radio]:focus + .card-content-wrapper .check-icon {
+box-shadow: 0 0 0 4px rgba(48, 86, 213, 0.2);
+border-color: #3056d5;
+}
+label.radio-card .card-content img {
+margin-bottom: 10px;
+}
+label.radio-card .card-content h4 {
+margin-left: 1px;
+font-size: 23px;
+letter-spacing: -0.24px;
+text-align: center;
+color: #ffffff;
+margin-bottom: 10px;
+}
+label.radio-card .card-content h5 {
+font-size: 17px;
+line-height: 1.4;
+text-align: center;
+color: #d3c9c9;
+}
+.submit1 {
+  margin-top: 50px;
+  margin-left: 50%; /* Use percentage for responsiveness */
+  transform: translateX(-50%); /* Center the button horizontally */
+  cursor: pointer;
+  border: none;
+  background-color: #3e5a81;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  border-radius: 20px;
+}
+.submit2 {
+  margin-top: 50px;
+  margin-left: 50%; /* Use percentage for responsiveness */
+  transform: translateX(-50%); /* Center the button horizontally */
+  cursor: pointer;
+  border: none;
+  background-color: #3e5a81;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+textarea{
+
+font-family: sans-serif;
+height: 145px;
+font-size: 18px;
+resize: none;
+}
+.damage {
+  background-color: #9E9E9E;
+  color: black;
+  border-radius: 4px;
+}
+
+.nameH,
+.matric,
+.phone {
+  width: 100%;
+  max-width: 750px; /* Optional: set a maximum width if needed */
+}
+
+.reason {
+  width: 100%;
+  max-width: 762px; /* Optional: set a maximum width if needed */
+  height: 95px;
+}
+.fileproof{
+background-color: white;
+border: 1px solid black;
+margin-bottom: 12px;
+padding: 12px;
+}
+#bottom-bar {
+background-color: #D9D9D9;
+color: black;
+text-align: center;
+position: relative;
+bottom: 0;
+
+height: auto;
+padding: 20px;
+
+
+}
+.faruqs{
+margin-top: 70px;
+margin-bottom: 20px;
+margin-left: 96%;
+}
+
+@media only screen and (max-width: 624px) {
+  /* Adjust styles for smaller screens */
+h4{
+  font-size: smaller;
+}
+h1{
+  font-size: 20px;
+}
+  .menu {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 30px;
+}
+
+.submit1,
+.submit2 {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+  /* Add more styles as needed for smaller screens */
+  .nameH,
+    .matric,
+    .phone,
+    .reason {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        max-width: 100%;
+    }
+.dropdown{
+  font-size: 15px;
+}
+    .grid-wrapper {
+      grid-template-columns: 1fr; /* Change to a single column layout on smaller screens */
+  }
+
+  .grid-col-auto {
+      grid-auto-flow: row; /* Adjust to a single column layout on smaller screens */
+  }
+  
+  .radio-card {
+      max-width: 100%; /* Ensure radio cards don't exceed the width of their container */
+  }
+  
+  .card-content-wrapper {
+      width: 100%; /* Ensure the content wrapper doesn't exceed the width of the radio card */
+  }
+}
+@media only screen and (max-width: 1024px) {
+  /* Adjust styles for smaller screens */
+
+  .menu {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 30px;
+}
+
+.submit1,
+.submit2 {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+  /* Add more styles as needed for smaller screens */
+  .nameH,
+    .matric,
+    .phone,
+    .reason {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        max-width: 100%;
+    }
+
+    .grid-wrapper {
+      grid-template-columns: 1fr; /* Change to a single column layout on smaller screens */
+  }
+
+  .grid-col-auto {
+      grid-auto-flow: row; /* Adjust to a single column layout on smaller screens */
+  }
+  
+  .radio-card {
+      max-width: 100%; /* Ensure radio cards don't exceed the width of their container */
+  }
+  
+  .card-content-wrapper {
+      width: 100%; /* Ensure the content wrapper doesn't exceed the width of the radio card */
+  }
+}
+
+ /* Add the following styles for the navigation bar */
+  /* Add the following styles for the navigation bar */
+  .navigation-bar {
+    display: none;
+    position: absolute;
+    top: 91px; /* Adjust the top position based on your header height */
+    left: 0;
+    width: 100%;
+    background-color: #0B253C;
+    z-index: 1000;
+    text-align: center; /* Center the navigation links */
+    transition: top 0.3s ease-in-out; /* Add transition for smoother effect */
+}
+
+.navigation-bar a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: inline-block; /* Display links horizontally */
+    border-right: 1px solid #ffffff; /* Add a border between links */
+}
+
+.navigation-bar a:last-child {
+    border-right: none; /* Remove border for the last link */
+}
+
+/* Add the following styles for the arrow-down icon */
+.container-arrow {
+    text-align: center;
+    margin-top: 10px;
+    transition: margin-top 0.3s ease-in-out; /* Add transition for smoother effect */
+}
+
+.arrow {
+    position: relative;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}

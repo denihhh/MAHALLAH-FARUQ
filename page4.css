@@ -1,0 +1,107 @@
+body {
+    font-family: 'Source Serif Pro';
+    margin: 0;
+    padding: 0;
+    background-color: #0B253C;
+}
+/* TOP BAR */
+#top-bar {
+    background-color: #0B253C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: 91px;
+}
+.image-text{
+    font-size: 24px;
+}
+.image-container {
+    display: flex;
+    align-items: center;
+}
+
+.image-container img {
+    max-width: 100px; /* Adjust the width as needed */
+    height: auto;
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.image-text {
+    color: white;
+}
+.arrow {
+    position: relative;
+    border: solid grey;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 10px;
+    top: 1px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+/* TOP BAR */
+
+.box{
+    background-color: #30475C;
+    width: 97%;
+    height: 700px;
+    margin-left: 30px;
+    margin-top: 70px;
+    overflow: auto;
+    
+}
+
+.box2{
+    display: flex;
+    padding-top: 50px;
+    row-gap: 10px;
+   
+}
+
+#container-1{
+    width: 33.34%;
+    padding-left: 12%;
+    
+    
+    
+}
+#container-2{
+    width: 33.34%;
+    padding-left: 12%;
+    
+    
+}
+#container-3{
+    width: 33.34%;
+    padding-left: 12%;
+   
+}
+
+.faruqs{
+    margin-top: 70px;
+    margin-left: 96%;
+    margin-bottom: 30px;
+    
+}
+#bottom-bar {
+    background-color: #D9D9D9;
+    color: black;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    padding: 50px;
+    
+    
+
+    
+}

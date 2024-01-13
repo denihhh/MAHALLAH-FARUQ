@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="topbar.css">
+    <script src="topbar.js"></script>
+    <title>Profile Page</title>
+</head>
+
+<body>
+    <style>
+        a {
+  color: inherit; /* Inherit color from the parent element */
+  text-decoration: none; /* Remove underline */
+}
+    </style>
+    <header class="topbar2">
+        <img class="notilogo" onclick="toggleWindow()" src="public/notification.png" alt="notilogo">
+        <div id="notibar">
+            <p>you have no new notification!<br>-------------------------------------</p>
+            <button onclick="toggleWindow()">Close</button>
+        </div>
+        <div class="faruqsymbol"><a href="homepage.html">
+            <img class="faruqofflogo" alt="faruqlogo" src="./public/image-1@2x.png" />
+    
+            <div class="faruq">FARUQ</div>
+            <div class="faruqsymbol-child"></div>
+        </a>    
+        </div>
+        <img class="profilepic" onclick="toggleWindow2()" src="public/profile.png" alt="profilepicture">
+        <div id="profilebar">
+            <img class="profilebar" src="public/profilebar.png" alt="profilebar">
+            <hr class="profline">
+            <div class="profbarelcontain">
+                <a href="page2.html"><img class="profitem" src="public/disciplinarybut.png" alt="discipline"></a>
+                <a href="profile.html"><img class="profitem" src="public/viewprofbut.png" alt="viewprofile"></a>
+                <a href="welcomingpage.html"><img class="profitem" src="public/signoutbut.png" alt="signout"></a>
+            </div>
+        </div>
+    </header>
+    <hr class="customline">
+    <nav class="nav">
+        <img class="navarrow" src="public/navarrow.png" alt="navigation arrow">
+        <div class="navcontainer">
+            <img src="public/navbar.png" alt="">
+            <div class="navelement">
+                <div><a href="page1.html">Announcement</a></div>
+                <div><a href="page5.html">Advertisement</a></div>
+                <div><a href="eventpage.html">Event</a></div>
+                <div><a href="service.html">Service</a></div>
+                <div><a href="page6.html">Room Reg</a></div>
+                <div><a href="page3.html">About</a></div>
+            </div>
+        </div>
+    </nav>
+
+    <h4>P R O F I L E</h4><br>
+    <div class="prof-container">
+        <div class="row">
+            <div class="column1">
+                <!-- Use a label to style the file input -->
+                <label for="fileInput" class="pic">
+                    <input type="file" id="fileInput" style="display: none;" onchange="displayImage(this)">
+                    <img src="imgpg/denih.png" alt="Profile Picture">
+                    <p class="change-photo-text">Change <br>Photo</p>
+                </label>
+                <p class="matricno">2219885</p>
+            </div>
+            <div class="column2">
+
+                <h2>Danish Haikal bin Mohammad</h2>
+                <button class="edit">Edit Profile</button>
+                <button class="edit" onclick="toggleEditForm()">Edit Profile</button>
+
+                <div class="edit-form" id="editForm">
+                    <span class="close-btn" onclick="toggleEditForm()">X</span>
+                    <form onsubmit="event.preventDefault(); saveChanges();">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" value="haikaldenih@gmail.com"><br>
+                        <br><br>
+                        <label for="liveEmail">Live Email:</label>
+                        <input type="email" id="liveEmail" name="liveEmail" value="denih1234@live.iium.edu.my"><br>
+                        <br><br>
+                        <label for="address">Address:</label>
+                        <input type="text" id="address" name="address" value="Lot 1234 Gombak, Selangor"><br>
+                        <br><br>
+                        <label for="phoneNo">Phone No:</label>
+                        <input type="text" id="phoneNo" name="phoneNo" value="0123456789"><br>
+                        <br>
+
+
+                        <input type="submit" value="Save Changes">
+                    </form>
+                </div>
+                <h3 style="color: rgb(16, 18, 39);">Bachelor of Computer Sciences (Honor)</h3>
+
+                <div class="about">
+
+                        <h2 class="about-underline">About</h2>
+                    <div class="row1">
+                        <div class="col1">
+                            Email
+                            <hr>
+                            
+                            Live Email
+                            <hr>
+                            Address
+                            <hr>
+                            Phone No
+                            <hr>
+                            Study Year
+                            <hr>
+                            Room
+                        </div>
+                        <div class="col2">
+                            <span id="displayEmail">haikaldenih@gmail.com</span>
+                            <hr>
+                            <span id="displayLiveEmail">denih1234@live.iium.edu.my</span>
+                            <hr>
+                            <span id="displayAddress">Lot 1234 Gombak, Selangor</span>
+                            <hr>
+                            <span id="displayPhoneNo">0123456789</span>
+                            <hr>
+                            <span id="displayStudyYear">1st Sem 2nd Year</span>
+                            <hr>
+                            <span id="displayRoom">Block G Level 4.2C</span>
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="faruqs">
+        <img src="imgpg/faruqbottom.png" height="61" width="68" alt="Center Image">
+    </div>
+    <!-- bottom bar-->
+    <div id="bottom-bar">
+        <div style="font-size: 24px;font-weight: bold;letter-spacing: 5px;font-family: 'Abril Fatface';">* B Y&nbsp; K R
+            O N I &nbsp; I T *</div>
+        <div style="font-size: 15px;">CONTACT US AT KRONIIT@GMAIL.COM</div>
+    </div>
+    <script>
+        function displayImage(input) {
+            const fileInput = input.files[0];
+            if (fileInput) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    document.querySelector('.pic img').src = e.target.result;
+                    document.querySelector('.imgheader').src = e.target.result;
+
+                };
+                reader.readAsDataURL(fileInput);
+            }
+        }
+
+        function toggleEditForm() {
+            const editForm = document.getElementById('editForm');
+            editForm.style.display = (editForm.style.display === 'none') ? 'block' : 'none';
+        }
+
+        function saveChanges() {
+            const email = document.getElementById('email').value;
+            const liveEmail = document.getElementById('liveEmail').value;
+            const address = document.getElementById('address').value;
+            const phoneNo = document.getElementById('phoneNo').value;
+
+
+            // Update the corresponding elements on the page
+            document.getElementById('displayEmail').innerText = email;
+            document.getElementById('displayLiveEmail').innerText = liveEmail;
+            document.getElementById('displayAddress').innerText = address;
+            document.getElementById('displayPhoneNo').innerText = phoneNo;
+
+
+            // Close the edit form
+            toggleEditForm();
+        }
+        
+    </script>
+
+
+
+</body>
+
+</html>

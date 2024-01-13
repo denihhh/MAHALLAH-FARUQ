@@ -1,0 +1,515 @@
+body{
+    background-color: #0B253C;
+    font-family: 'Source Serif Pro';
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+h4{
+    color: white;
+    margin-left: 90px;
+    margin-top: 50px;
+}
+
+.prof-container{
+    background-color: #828F9B;
+    border-radius: 6px;
+    width: 91%; /* Set the width as a percentage or any specific value */
+    height: 600px; /* Set the height as needed */
+    margin: 20px auto; /* Adjust margin for centering or spacing */
+}
+.prof-container img {
+   
+    margin: 50px;
+}
+.matricno{
+    margin-left: 70px;
+    margin-top: -20px;
+     font-size: 22px;
+     color: white;
+}
+.row{
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+.column1{
+    flex-basis: 20%;
+    align-items: center;
+    
+    display: inline-block;
+    vertical-align:top;
+    margin-top: -200px;
+    margin-left: 90px;
+
+}
+.column2{
+    display: inline-block;
+    margin-top: 80px;
+    flex-basis: 72%;
+    align-items: center;
+    position: relative; /* Added for positioning */
+}
+.about{
+    font-family: 'Source Serif Pro';
+    background-color: #597B98;
+    padding: 50px;
+    padding-top: 10px;
+    border-radius: 10px;
+    font-size: 17px;
+    color: #fdfdfd;
+}
+.edit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 20px;
+  cursor: pointer;
+  background-color: #3e5a81;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 20px;
+  
+}
+.edit:hover{
+    background-color: #3566aa;
+}
+.edit-form {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 76%;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+    background-color: #253C0B;
+    border-radius: 10px;
+    z-index: 999;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+}
+
+.edit-form form {
+    margin-top: 20px;
+}
+
+.edit-form label {
+    color: #fff;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.edit-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.edit-form input[type="submit"] {
+    background-color: #3e5a81;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.edit-form input[type="submit"]:hover {
+    background-color: #2d4463;
+}
+
+.about-underline{
+    padding:2px;
+    border-bottom: 2px solid black;
+    width: max-content;
+}
+.row1{
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+.col1{
+    color: black;
+    font-weight: 700;
+    font-size: 19px;
+    flex-basis: 20%;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-block;
+    vertical-align:top;
+    
+
+
+}
+.col2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: 19px;
+    flex-basis: 90%;
+    align-items: center;
+    
+    display: inline-block;
+    vertical-align:top;
+   
+
+}
+
+
+.pic {
+    position: relative;
+    display: inline-block;
+}
+.pic img {
+    width: 120px; /* Set the desired width */
+    height: auto;
+}
+
+.change-photo-text {
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(29, 15, 224);
+    cursor: pointer;
+    font-size: 16px;
+    opacity: 0.4; /* Set the initial opacity */
+    transition: opacity 0.5s; /* Add transition effect */
+}
+
+.pic:hover .change-photo-text {
+    opacity: 1; /* Increase opacity on hover */
+}
+
+#bottom-bar {
+    background-color: #D9D9D9;
+    color: black;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+   
+    height: auto;
+    padding: 20px;
+    
+  
+}
+.faruqs{
+    margin-top: 70px;
+    margin-left: 94%;
+}
+
+@media only screen and (max-width: 1024px) {
+    body {
+        background-color: #0B253C;
+        font-family: 'Source Serif Pro';
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Header styles */
+    #top-bar {
+        background-color: #0B253C;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        height: 91px;
+    }
+    
+    .image-container {
+        display: flex;
+        align-items: center;
+    }
+    
+    .image-container img {
+        max-width: 100px;
+        height: auto;
+        margin-right: 10px;
+    }
+    
+    .image-text {
+        color: white;
+    }
+    
+    .arrow {
+        position: relative;
+        border: solid grey;
+        border-width: 0 1px 1px 0;
+        display: inline-block;
+        padding: 10px;
+        top: 1px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .down {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+    }
+    
+    /* Main content styles */
+    h4 {
+        color: white;
+        margin-left: 90px;
+        margin-top: 50px;
+    }
+    
+    .prof-container {
+        background-color: #828F9B;
+        border-radius: 6px;
+        width: 91%;
+        height: auto;
+        margin: 20px auto;
+    }
+    
+    .prof-container img {
+        margin: 50px;
+    }
+    .pic {
+        position: relative;
+        display: inline-block;
+    }
+    .pic img {
+        width: 70px; /* Set the desired width */
+        height: auto;
+    }
+    .change-photo-text {
+    
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        position: absolute;
+        text-align: center;
+        font-weight: bold;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgb(29, 15, 224);  
+        
+    }
+    .matricno{
+        font-size: 12px;
+        
+        
+    }
+    
+    .row {
+        display: flex;
+        flex-direction: column;
+        height: 88%;
+        align-items: center;
+    }
+    .column1{
+        margin-top: auto;
+       
+            margin-bottom: -80px;
+      
+        flex-basis: 10%;
+
+    }
+    .column2{
+        flex-basis: 90%;
+
+    }
+
+    
+    .about {
+        font-family: 'Source Serif Pro';
+        background-color: #597B98;
+        padding: 50px;
+        padding-top: 10px;
+        border-radius: 10px;
+        position: relative;
+        width: 90%;
+        font-size: 17px;
+        color: #fdfdfd;
+    }
+    
+    /* Edit form and buttons */
+    .edit {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 20px;
+        cursor: pointer;
+        background-color: #3e5a81;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        border-radius: 20px;
+    }
+    
+    .edit:hover {
+        background-color: #3566aa;
+    }
+    
+    .edit-form {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 50%;
+        height: 56%;
+        transform: translate(-50%, -50%);
+        padding: 30px;
+        background-color: #253C0B;
+        border-radius: 10px;
+        z-index: 999;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        color: #fff;
+        font-size: 18px;
+    }
+    
+    .edit-form form {
+        margin-top: 20px;
+    }
+    
+    .edit-form label {
+        color: #fff;
+        font-size: 16px;
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .edit-form input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+    
+    .edit-form input[type="submit"] {
+        background-color: #3e5a81;
+        color: #fff;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+    .edit-form input[type="submit"]:hover {
+        background-color: #2d4463;
+    }
+    
+    .about-underline {
+        padding: 2px;
+        border-bottom: 2px solid black;
+        width: max-content;
+    }
+    
+    .row1 {
+        display: flex;
+        height: 88%;
+        align-items: center;
+    }
+    
+    .col1,
+    .col2 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 700;
+        font-size: 19px;
+        flex-basis: 50%;
+        align-items: center;
+        display: inline-block;
+        vertical-align: top;
+    }
+    
+    /* Footer styles */
+    #bottom-bar {
+        background-color: #D9D9D9;
+        color: black;
+        text-align: center;
+        position: relative;
+        bottom: 0;
+        height: auto;
+        padding: 20px;
+    }
+    
+    .faruqs {
+        margin-top: 70px;
+        margin-left: 80%;
+    }
+}
+
+@media only screen and (max-width: 680px){
+    h2{
+        font-size: 17px;
+    }
+    h3{
+        font-size: 13px;
+        padding: -20px;
+    }
+    button{
+        font-size: 8px;
+        width: max-content; /* Set the desired width */
+    height: max-content; /* Set the desired height */
+    margin-right: -50px;
+    }
+   
+    .col1,
+    .col2 {
+        font-size: 12px;
+    }
+    .column1{
+        margin-bottom: -90px;
+       }
+    
+
+}
+@media only screen and (max-width: 522px){
+    h2{
+        
+        font-size: 17px;
+    }
+    h3{
+        font-size: 13px;
+        padding: -20px;
+    }
+    button{
+        font-size: 8px;
+        width: max-content; /* Set the desired width */
+    height: max-content; /* Set the desired height */
+    margin-right: -50px;
+    }
+   .column1{
+    margin-bottom: -80px;
+   }
+    .col1,
+    .col2 {
+        font-size: 12px;
+    }
+
+
+}

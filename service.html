@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faruq Portal</title>
+  <link rel="stylesheet" href="service.css">
+  <script src="service.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Source Serif Pro' rel='stylesheet'>
+
+</head>
+
+<body>
+  <header>
+    <div id="top-bar">
+      <div class="image-container">
+        <img src="imgpg/noti.png" height="44" width="48" alt="Left Image">
+
+      </div>
+      <div class="image-container">
+        <img src="imgpg/faruq logo.png" height="86" width="69" alt="Center Image">
+        <span class="image-text">F A R U Q</span>
+      </div>
+
+      <div class="image-container">
+        <img src="imgpg/denih.png" height="59" width="70" alt="Right Image">
+
+      </div>
+
+    </div>
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+    
+    
+    
+
+  </header>
+
+  <div class="container-arrow" id="arrow-container" onmouseenter="showNavigationBar()" onmouseleave="hideNavigationBar()">
+    <p><i class="arrow down" id="arrow-icon"></i></p>
+</div>
+
+<div class="navigation-bar" id="navigation-bar" onmouseenter="showNavigationBar()" onmouseleave="hideNavigationBar()">
+    <a href="#">Announcement</a>
+    <a href="#">Advertisement</a>
+    <a href="#">Event</a>
+    <a href="#">Service</a>
+    <a href="#">About</a>
+</div>
+
+  <h4>S E R V I C E</h4><br>
+  <h1>WELCOME TO SERVICE PAGE</h1>
+
+
+  <div class="menu">
+    <div class="dropdown" id="dropdown">
+      <span id="dropdown-toggle">Cleaning Service &#9661;</span>
+      <div class="dropdown-content">
+
+        <div class="container">
+          <hr>
+          <div class="top-text-wrapper">
+            Choose 1 service for your room here!
+          </div>
+
+          <div class="grid-wrapper grid-col-auto">
+            <label for="radio-card-1" class="radio-card">
+              <input type="radio" name="radio-card" id="radio-card-1" checked />
+              <div class="card-content-wrapper">
+                <span class="check-icon"></span>
+                <div class="card-content">
+                  <img src="imgpg/fan.png" alt="" />
+                  <h4>Fan Cleaning and Service.</h4>
+                  <h5>Only do fan cleaning and another services for fan .</h5>
+                </div>
+              </div>
+            </label>
+            <!-- /.radio-card -->
+            <label for="radio-card-2" class="radio-card">
+              <input type="radio" name="radio-card" id="radio-card-2" checked />
+              <div class="card-content-wrapper">
+                <span class="check-icon"></span>
+                <div class="card-content">
+                  <img src="imgpg/floor.png" alt="" />
+                  <h4>Floor Cleaning Service.</h4>
+                  <h5>Floor cleaning for your room.</h5>
+                </div>
+              </div>
+            </label>
+
+            <label for="radio-card-3" class="radio-card">
+              <input type="radio" name="radio-card" id="radio-card-3" checked />
+              <div class="card-content-wrapper">
+                <span class="check-icon"></span>
+                <div class="card-content">
+                  <img src="imgpg/window.png" alt="" />
+                  <h4>Window Cleaning Service.</h4>
+                  <h5>Window wiping and cleaning till shiny.</h5>
+                </div>
+              </div>
+            </label>
+
+            <label for="radio-card-4" class="radio-card">
+              <input type="radio" name="radio-card" id="radio-card-4" checked />
+              <div class="card-content-wrapper">
+                <span class="check-icon"></span>
+                <div class="card-content">
+                  <img src="imgpg/full-service.png" alt="" />
+                  <h4>Full Cleaning Service.</h4>
+                  <h5>Clean your whole room and included all services.</h5>
+                </div>
+              </div>
+            </label>
+
+            <!-- /.radio-card -->
+          </div>
+          <!-- /.grid-wrapper -->
+
+          <input type="button" onclick="popup()" value="Submit" class="submit1">
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="dropdown" id="dropdown-2">
+      <span id="dropdown-toggle-2">Damage Report &#9661;</span>
+      <div class="dropdown-content">
+        <hr>
+        <div class="top-text-wrapper" style="text-align: left;">
+          TELL US THE DETAIL ABOUT THE DAMAGE
+          <HR>
+          </HR>
+        </div>
+        <form>
+
+          <textarea type="text" class="damage" placeholder="Write me something...." required></textarea>
+
+          <input type="submit" onclick="popup2()" value="Submit" class="submit2">
+
+        </form>
+      </div>
+    </div>
+
+    <div class="dropdown" id="dropdown-3">
+      <span id="dropdown-toggle-3">Healthcare &#9661;</span>
+      <div class="dropdown-content">
+        <hr>
+        <form class="healthcare">
+          <label for="name">Name: <input type="text" class="nameH" required></label>
+          <label for="matric">Matric No: <input type="text" class="matric" required></label>
+          <label for="phone">Phone No: <input type="text" class="phone" required></label>
+          <label for="reason">Reason:<textarea type="text" class="reason" required></textarea></label>
+          <label for="proof">Proof: <br>
+            <div class="fileproof">
+              <p style="font-size: 16px;">Click on the "Choose File" button to upload a file:</p>
+              <input type="file" class="proof" required>
+          </label>
+      </div>
+
+      <input type="submit" onclick="popup3()" value="Submit" class="submit2">
+      </form>
+    </div>
+  </div>
+
+  <div class="dropdown" id="dropdown-4">
+    <span id="dropdown-toggle-4">Contact Service &#9661;</span>
+    <div class="dropdown-content">
+      <hr>
+      <h3>Have an emergency? Directly contact our fellow on duty here.</h3>
+      <form>
+        <textarea type="text" class="emergency" placeholder="Write your emergency/problem here..."></textarea>
+        <br>
+        <input type="submit" onclick="popup4()" value="Submit" class="submit2">
+      </form>
+    </div>
+  </div>
+  </div>
+
+  <div class="faruqs">
+    <img src="imgpg/faruqbottom.png" height="61" width="68" alt="Center Image">
+</div>
+<!-- bottom bar-->
+<div id="bottom-bar">
+    <div style="font-size: 24px;font-weight: bold;letter-spacing: 5px;font-family: 'Abril Fatface';">* B Y&nbsp; K R
+        O N I &nbsp; I T *</div>
+    <div style="font-size: 15px;">CONTACT US AT KRONIIT@GMAIL.COM</div>
+</div>
+
+  
+</body>
+
+</html>

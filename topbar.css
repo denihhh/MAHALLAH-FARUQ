@@ -1,0 +1,192 @@
+.faruqofflogo {
+    position: absolute;
+    top: 91px;
+    left: 23px;
+    width: 1236px;
+    height: 0.2px;
+    object-fit: contain;
+  }
+  
+  .customline {
+    width: 95%;
+    /* Adjust the length as needed */
+    margin: 0 auto;
+    /* Center the line */
+    border: 1px solid var(--linecolorwhite);
+  }
+  
+  .faruqofflogo {
+    top: 9px;
+    left: -16px;
+    width: 86px;
+    height: 69px;
+    object-fit: cover;
+  }
+  
+  .faruq {
+    position: absolute;
+    font-size: var(--font-size-5xl);
+    font-family: var(--font-abril-fatface);
+    top: 20px;
+    left: 75px;
+    letter-spacing: 0.52em;
+    line-height: 183.02%;
+    text-transform: capitalize;
+    display: inline-block;
+    width: 197px;
+    height: 39px;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+    
+  .faruqsymbol-child {
+    position: absolute;
+    top: 15.5px;
+    left: -0.5px;
+    border-radius: 50%;
+    background-color: #565555;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--linecolorwhite);
+    box-sizing: border-box;
+    width: 57px;
+    height: 58px;
+    opacity: 0.5;
+  }
+  
+  .faruqsymbol {
+    position: absolute;
+    top: 0;
+    height: 91px;
+  }
+  
+  .faruqsymbol {
+    left: calc(50% - 102px);
+    width: 205px;
+  }
+  .navarrow {
+    position: relative;
+    width: 31px;
+    height: 21px;
+    left: 50%;
+  }  
+  .navcontainer {
+    display: none;
+    opacity: 0;
+    transition: opacity 5s ease;
+  }
+  
+  .nav:hover .navcontainer {
+    display: block;
+    opacity: 1;
+  }
+  
+  .navcontainer img {
+    position: relative;
+    top: -25px;
+    left: 2.5%;
+    width: 95%;
+    height: auto;
+  }
+  
+  .navelement {
+    display: flex;
+    position: relative;
+    top: -60px;
+    width: 95%;
+    left: 2.5%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navelement div {
+    font-size: var(--font-size-xl);
+    padding-right: 5%;
+    padding-left: 5%;
+    color: var(--color-black);
+    font-family: var(--font-source-serif-pro);
+  }
+  .topbar2 {
+    left: 0;
+    background-color: var(--maincolorblue);
+    width: 100%;
+    overflow: visible;
+    color: #cfcfcf;
+    font-family: var(--font-abril-fatface);
+  }
+  
+  .topbar2 {
+    top: 0;
+    height: 91px;
+  }
+  .notilogo {
+    cursor: pointer;
+    width: 48px;
+    height: 44px;
+    margin-left: 30px;
+    margin-top: 40px;
+  }
+  
+  .profilepic {
+    position: absolute;
+    cursor: pointer;
+    width: 48px;
+    height: 44px;
+    right: 30px;
+    margin-top: 40px;
+  }
+  
+  #notibar {
+    display: none;
+    position: absolute;
+    font-size: var(--font-size-5xl);
+    top: 32%;
+    left: 15.5%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #0a0909;
+    color: var(--creamgakla);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  #profilebar {
+    display: none;
+    position: absolute;
+    top: 29%;
+    right: -6.6%;
+    width: 229px;
+    height: 143px;
+    transform: translate(-50%, -50%);
+    background-color: #4e1717;
+    border: 1px solid #0a0909;
+    color: var(--creamgakla);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  
+  .profbarelcontain {
+    position: absolute;
+    top: 30%;
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .profline {
+    position: relative;
+    top: -85%;
+    width: 90%;
+    border-color: #000000;
+  }
+  
+  .profitem {
+    height: 26px;
+    width: auto;
+    padding: 12px;
+  }
+  
+  .profilebar {
+    height: 100%;
+    width: 100%;
+  }

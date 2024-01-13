@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril Fatface:wght@400&display=swap" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Source Serif Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=TT Commons:wght@400;500&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela Gothic One:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" />
+</head>
+
+<body>
+    
+    <div class="homepage">
+        <header class="topbar2">
+            <img class="notilogo" onclick="toggleWindow()" src="public/notification.png" alt="notilogo">
+            <div id="notibar">
+                <p>you have no new notification!<br>-------------------------------------</p>
+                <button onclick="toggleWindow()">Close</button>
+            </div>
+            <div class="faruqsymbol"><a href="homepage.html">
+                <img class="faruqofflogo" alt="faruqlogo" src="./public/image-1@2x.png" />
+        
+                <div class="faruq">FARUQ</div>
+                <div class="faruqsymbol-child"></div>
+            </a>    
+            </div>
+            <img class="profilepic" onclick="toggleWindow2()" src="public/profile.png" alt="profilepicture">
+            <div id="profilebar">
+                <img class="profilebar" src="public/profilebar.png" alt="profilebar">
+                <hr class="profline">
+                <div class="profbarelcontain">
+                    <a href="page2.html"><img class="profitem" src="public/disciplinarybut.png" alt="discipline"></a>
+                    <a href="profile.html"><img class="profitem" src="public/viewprofbut.png" alt="viewprofile"></a>
+                    <a href="welcomingpage.html"><img class="profitem" src="public/signoutbut.png" alt="signout"></a>
+                </div>
+            </div>
+        </header>
+        <div class="homebody">
+            <hr class="customline">
+            <nav class="nav">
+                <img class="navarrow" src="public/navarrow.png" alt="navigation arrow">
+                <div class="navcontainer">
+                    <img src="public/navbar.png" alt="">
+                    <div class="navelement">
+                        <div><a href="page1.html">Announcement</a></div>
+                <div><a href="page5.html">Advertisement</a></div>
+                <div><a href="eventpage.html">Event</a></div>
+                <div><a href="service.html">Service</a></div>
+                <div><a href="page6.html">Room Reg</a></div>
+                <div><a href="page3.html">About</a></div>
+               
+                    </div>
+                </div>
+            </nav>
+            <main class="homebodycontainer">
+                <div class="selectorcontainer">
+                    <img class="selectorline" src="public/linehome.png" alt="selectorline">
+                    <img class="selectordot" src="public/dothome.png" alt="selectordot">
+                </div>
+                <img class="blackbg" src="public/background.png" alt="blendblackbg">
+                <div class="picker-container">
+                    <ul class="picker-list" id="pickerList">
+                        <li class="picker-item"><a href="page4.html">ADVERTISEMENT</a></li>
+                        <li class="picker-item">NEWS</li>
+                        <li class="picker-item"><a href="page1.html">ANNOUNCEMENT</a></li>
+                        <li class="picker-item">ISLAMIC NOTES </li>
+                    </ul>
+                </div>
+                <div class="imageholder">
+                    <div class="anbox1">
+                        <img class="anbox" src="public/advertisementbox.png" alt="1">
+                        <div class="adsconholder" id="adsContainer">
+                            <img class="adscontent" src="public/adscontent.png" alt="adscontent">
+                        </div>
+                    </div>
+                    <div class="anbox2">
+                        <img class="anbox" src="public/newsbox.png" alt="2">
+                        <div class="adsconholder" id="adsContainer">
+                            <img class="adscontent" src="public/newcontent.png" alt="adscontent">
+                        </div>
+                    </div>
+                    <div class="anbox3">
+                        <img class="anbox" src="public/announcementbox.png" alt="3">
+                        <div class="adsconholder" id="adsContainer">
+                            <img class="adscontent" src="public/ancontent.png" alt="adscontent">
+                        </div>
+                    </div>
+                    <div class="anbox4">
+                        <img class="anbox" src="public/islamicnotes1.png" alt="4">
+                    </div>
+                </div>
+            </main>
+        </div>
+        <div class="faruqlogo1">
+            <div class="faruqlogo-child"></div>
+            <div class="ruq1">RUQ</div>
+            <div class="fa1">FA</div>
+        </div>
+        <footer class="bottombar">
+            <div class="BBtext">
+                <p class="text">*BY KRONI IT*</p>
+            </div>
+            <i class="BBcontacttext">
+                <p class="text">cONTACT US AT KRONIIT@GMAIL.COM</p>
+            </i>
+        </footer>
+
+    </div>
+
+    <script>
+        function toggleWindow() {
+            var modal = document.getElementById('notibar');
+            modal.style.display = (modal.style.display === 'none' || modal.style.display === '') ? 'block' : 'none';
+        }
+        function toggleWindow2() {
+            var modal = document.getElementById('profilebar');
+            modal.style.display = (modal.style.display === 'none' || modal.style.display === '') ? 'block' : 'none';
+        }
+        const pickerList = document.getElementById('pickerList');
+        let selectedItemIndex = Math.floor(pickerList.children.length / 2);
+
+        function updatePicker() {
+            // Remove 'magnified' class from all items
+            Array.from(pickerList.children).forEach((item) => {
+                item.classList.remove('magnified');
+            });
+
+            // Add 'magnified' class to the selected item
+            pickerList.children[selectedItemIndex].classList.add('magnified');
+
+            // Calculate the translation to center the selected item
+            const translateY = (pickerList.children.length / 2 - selectedItemIndex) * pickerList.children[0].clientHeight;
+            pickerList.style.transform = `translateY(${translateY}px)`;
+
+            // Hide all images
+            Array.from(document.querySelectorAll('.anbox')).forEach((modal) => {
+                modal.style.display = 'none';
+            });
+
+            // Hide all images
+            Array.from(document.querySelectorAll('.imageholder img')).forEach((image) => {
+                image.style.display = 'none';
+            });
+
+            // Show the images for the magnified text
+            const magnifiedImages = document.querySelectorAll(`.anbox${selectedItemIndex + 1} img`);
+            magnifiedImages.forEach((image) => {
+                image.style.display = 'block';
+            });
+        }
+
+
+        function handleWheel(event) {
+            // Check if the event target is within .adsconholder
+            const adsconholder = document.getElementById('adsContainer'); // Use the correct ID
+            if (event.target.closest('.adsconholder')) {
+                // Update the scrollTop of .adsconholder based on the wheel event
+                adsconholder.scrollTop += event.deltaY;
+            } else {
+                // Prevent the default behavior to stop the scroll for elements other than .adsconholder
+                event.preventDefault();
+
+                // Calculate the direction of the scroll for the pickerList
+                const direction = Math.sign(event.deltaY);
+
+                // Update the selected item index
+                selectedItemIndex += direction;
+
+                // Ensure the index stays within the bounds of the list
+                selectedItemIndex = Math.max(0, Math.min(selectedItemIndex, pickerList.children.length - 1));
+
+                // Update the picker view
+                updatePicker();
+            }
+        }
+
+
+        // Attach the wheel event listener to the picker container
+        pickerList.addEventListener('wheel', handleWheel);
+
+
+
+        // Initial update to center the selected item
+        updatePicker();
+    </script>
+</body>
+
+</html>

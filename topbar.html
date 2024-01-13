@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="topbar.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril Fatface:wght@400&display=swap" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Source Serif Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=TT Commons:wght@400;500&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela Gothic One:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" />
+    <script src="topbar.js"></script>
+</head>
+<body>
+    <header class="topbar2">
+        <img class="notilogo" onclick="toggleWindow()" src="public/notification.png" alt="notilogo">
+        <div id="notibar">
+            <p>you have no new notification!<br>-------------------------------------</p>
+            <button onclick="toggleWindow()">Close</button>
+        </div>
+        <div class="faruqsymbol">
+            <img class="faruqofflogo" alt="faruqlogo" src="./public/image-1@2x.png" />
+
+            <div class="faruq">FARUQ</div>
+            <div class="faruqsymbol-child"></div>
+        </div>
+        <img class="profilepic" onclick="toggleWindow2()" src="public/profile.png" alt="profilepicture">
+        <div id="profilebar">
+            <img class="profilebar" src="public/profilebar.png" alt="profilebar">
+            <hr class="profline">
+            <div class="profbarelcontain">
+                <img class="profitem" src="public/disciplinarybut.png" alt="discipline">
+                <img class="profitem" src="public/viewprofbut.png" alt="viewprofile">
+                <img class="profitem" src="public/signoutbut.png" alt="signout">
+            </div>
+        </div>
+    </header>
+    <hr class="customline">
+    <nav class="nav">
+        <img class="navarrow" src="public/navarrow.png" alt="navigation arrow">
+        <div class="navcontainer">
+            <img src="public/navbar.png" alt="">
+            <div class="navelement">
+                <div>Announcement</div>
+                <div>Advertisement</div>
+                <div>Event</div>
+                <div>Service</div>
+                <div>Room Reg</div>
+                <div>About</div>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>
