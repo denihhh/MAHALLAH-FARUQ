@@ -1417,3 +1417,63 @@ a {
   right: 40%;
 }
 }
+
+@media (max-width: 1070px) {  
+  .navelement {
+    top: -32px;
+  }
+  .navelement div {
+    font-size: var(--font-size-base);
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+}
+@media (max-width: 855px) {  
+  .navelement {
+    top: -34px;
+  }
+  .navelement div {
+    font-size: 14px;
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+}
+@media (max-width: 750px) {  
+  .navelement {
+    top: -72px;
+  }
+  .navelement div {
+    font-size: 16px;
+    padding-right: 3%;
+    padding-left: 3%;
+  }
+  .navcontainer img {
+    position: relative;
+    top: -38px;
+    left: 0%;
+    width: 95%;
+    height: 30px;
+  }
+  
+}
+@media (max-width: 695px) {  
+  .navelement div {
+    font-size: 14px;
+    padding-right: 3%;
+    padding-left: 3%;
+  }  
+}
+@media (max-width: 622px) {  
+  .navelement div {
+    font-size: 14px;
+    padding-right: 2%;
+    padding-left: 2%;
+  }  
+}
+@media (max-width: 430px) {  
+  .navelement div {
+    font-size: 10px;
+    padding-right: 2%;
+    padding-left: 2%;
+  }  
+}
