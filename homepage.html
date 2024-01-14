@@ -72,27 +72,25 @@
                     </ul>
                 </div>
                 <div class="imageholder">
-                    <div class="anbox1" style="z-index: 3;">
+                    <div class="anbox1">
                         <img class="anbox" src="public/advertisementbox.png" alt="1">
                         <div class="adsconholder" id="adsContainer">
                             <img class="adscontent" src="public/adscontent.png" alt="adscontent">
                         </div>
                     </div>
-                    <div class="anbox2" style="z-index: 3;">
+                    <div class="anbox2">
                         <img class="anbox" src="public/newsbox.png" alt="2">
                         <div class="adsconholder" id="adsContainer">
                             <img class="adscontent" src="public/newcontent.png" alt="adscontent">
                         </div>
                     </div>
-                    <div class="anbox3" style="z-index: 3;">
+                    <div class="anbox3">
                         <img class="anbox" src="public/announcementbox.png" alt="3">
                         <div class="adsconholder" id="adsContainer">
                             <img class="adscontent" src="public/ancontent.png" alt="adscontent">
                         </div>
                     </div>
                     <div class="anbox4">
-                        <iframe src="https://timesprayer.com/widgets.php?frame=1&amp;lang=en&amp;name=selangor" 
-                        style="z-index: 2; border: none; overflow: hidden; width: 70%; height: 148px; padding-left: 22%;padding-top: 18%;"></iframe>
                         <img class="anbox" src="public/islamicnotes1.png" alt="4">
                     </div>
                 </div>
@@ -127,34 +125,39 @@
         let selectedItemIndex = Math.floor(pickerList.children.length / 2);
 
         function updatePicker() {
-            // Remove 'magnified' class from all items
-            Array.from(pickerList.children).forEach((item) => {
-                item.classList.remove('magnified');
-            });
+    // Check if the screen width is greater than 1024px
+    const isWideScreen = window.innerWidth > 1024;
 
-            // Add 'magnified' class to the selected item
-            pickerList.children[selectedItemIndex].classList.add('magnified');
+    // Remove 'magnified' class from all items
+    Array.from(pickerList.children).forEach((item) => {
+        item.classList.remove('magnified');
+    });
 
-            // Calculate the translation to center the selected item
-            const translateY = (pickerList.children.length / 2 - selectedItemIndex) * pickerList.children[0].clientHeight;
-            pickerList.style.transform = `translateY(${translateY}px)`;
+    // Add 'magnified' class to the selected item
+    pickerList.children[selectedItemIndex].classList.add('magnified');
 
-            // Hide all images
-            Array.from(document.querySelectorAll('.anbox')).forEach((modal) => {
-                modal.style.display = 'none';
-            });
+    // Calculate the translation to center the selected item
+    const translateY = (pickerList.children.length / 2 - selectedItemIndex) * pickerList.children[0].clientHeight;
+    
+    // Adjust scrolling direction based on screen width
+    pickerList.style.transform = isWideScreen ? `translateY(${translateY}px)` : `translateX(${translateY}px)`;
 
-            // Hide all images
-            Array.from(document.querySelectorAll('.imageholder img')).forEach((image) => {
-                image.style.display = 'none';
-            });
+    // Hide all images
+    Array.from(document.querySelectorAll('.anbox')).forEach((modal) => {
+        modal.style.display = 'none';
+    });
 
-            // Show the images for the magnified text
-            const magnifiedImages = document.querySelectorAll(`.anbox${selectedItemIndex + 1} img`);
-            magnifiedImages.forEach((image) => {
-                image.style.display = 'block';
-            });
-        }
+    // Hide all images
+    Array.from(document.querySelectorAll('.imageholder img')).forEach((image) => {
+        image.style.display = 'none';
+    });
+
+    // Show the images for the magnified text
+    const magnifiedImages = document.querySelectorAll(`.anbox${selectedItemIndex + 1} img`);
+    magnifiedImages.forEach((image) => {
+        image.style.display = 'block';
+    });
+}
 
 
         function handleWheel(event) {
