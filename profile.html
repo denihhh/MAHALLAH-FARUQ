@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="topbar.css">
     <script src="topbar.js"></script>
+    <script src="profile.js"></script>
     <title>Profile Page</title>
 </head>
 
@@ -150,44 +151,7 @@
             O N I &nbsp; I T *</div>
         <div style="font-size: 15px;">CONTACT US AT KRONIIT@GMAIL.COM</div>
     </div>
-    <script>
-        function displayImage(input) {
-            const fileInput = input.files[0];
-            if (fileInput) {
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                    document.querySelector('.pic img').src = e.target.result;
-                    document.querySelector('.imgheader').src = e.target.result;
-
-                };
-                reader.readAsDataURL(fileInput);
-            }
-        }
-
-        function toggleEditForm() {
-            const editForm = document.getElementById('editForm');
-            editForm.style.display = (editForm.style.display === 'none') ? 'block' : 'none';
-        }
-
-        function saveChanges() {
-            const email = document.getElementById('email').value;
-            const liveEmail = document.getElementById('liveEmail').value;
-            const address = document.getElementById('address').value;
-            const phoneNo = document.getElementById('phoneNo').value;
-
-
-            // Update the corresponding elements on the page
-            document.getElementById('displayEmail').innerText = email;
-            document.getElementById('displayLiveEmail').innerText = liveEmail;
-            document.getElementById('displayAddress').innerText = address;
-            document.getElementById('displayPhoneNo').innerText = phoneNo;
-
-
-            // Close the edit form
-            toggleEditForm();
-        }
-        
-    </script>
+    
 
 
 
