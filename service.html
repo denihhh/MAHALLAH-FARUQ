@@ -5,48 +5,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Faruq Portal</title>
+  <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="topbar.css">
+    <script src="topbar.js"></script>
   <link rel="stylesheet" href="service.css">
   <script src="service.js"></script>
+  
   <link href='https://fonts.googleapis.com/css?family=Source Serif Pro' rel='stylesheet'>
 
 </head>
 
 <body>
-  <header>
-    <div id="top-bar">
-      <div class="image-container">
-        <img src="imgpg/noti.png" height="44" width="48" alt="Left Image">
-
-      </div>
-      <div class="image-container">
-        <img src="imgpg/faruq logo.png" height="86" width="69" alt="Center Image">
-        <span class="image-text">F A R U Q</span>
-      </div>
-
-      <div class="image-container">
-        <img src="imgpg/denih.png" height="59" width="70" alt="Right Image">
-
-      </div>
-
+  <style>
+    a {
+color: inherit; /* Inherit color from the parent element */
+text-decoration: none; /* Remove underline */
+}
+</style>
+<header class="topbar2">
+    <img class="notilogo" onclick="toggleWindow()" src="public/notification.png" alt="notilogo">
+    <div id="notibar">
+        <p>you have no new notification!<br>-------------------------------------</p>
+        <button onclick="toggleWindow()">Close</button>
     </div>
-    <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-    
-    
-    
+    <div class="faruqsymbol"><a href="homepage.html">
+        <img class="faruqofflogo" alt="faruqlogo" src="./public/image-1@2x.png" />
 
-  </header>
+        <div class="faruq">FARUQ</div>
+        <div class="faruqsymbol-child"></div>
+    </a>    
+    </div>
+    <img class="profilepic" onclick="toggleWindow2()" src="public/profile.png" alt="profilepicture">
+    <div id="profilebar">
+        <img class="profilebar" src="public/profilebar.png" alt="profilebar">
+        <hr class="profline">
+        <div class="profbarelcontain">
+            <a href="page2.html"><img class="profitem" src="public/disciplinarybut.png" alt="discipline"></a>
+            <a href="profile.html"><img class="profitem" src="public/viewprofbut.png" alt="viewprofile"></a>
+            <a href="welcomingpage.html"><img class="profitem" src="public/signoutbut.png" alt="signout"></a>
+        </div>
+    </div>
+</header>
+<hr class="customline">
+<nav class="nav">
+    <img class="navarrow" src="public/navarrow.png" alt="navigation arrow">
+    <div class="navcontainer">
+        <img src="public/navbar.png" alt="">
+        <div class="navelement">
+            <div><a href="page1.html">Announcement</a></div>
+            <div><a href="page5.html">Advertisement</a></div>
+            <div><a href="eventpage.html">Event</a></div>
+            <div><a href="service.html">Service</a></div>
+            <div><a href="page6.html">Room Reg</a></div>
+            <div><a href="page3.html">About</a></div>
+        </div>
+    </div>
+</nav>
 
-  <div class="container-arrow" id="arrow-container" onmouseenter="showNavigationBar()" onmouseleave="hideNavigationBar()">
-    <p><i class="arrow down" id="arrow-icon"></i></p>
-</div>
-
-<div class="navigation-bar" id="navigation-bar" onmouseenter="showNavigationBar()" onmouseleave="hideNavigationBar()">
-    <a href="#">Announcement</a>
-    <a href="#">Advertisement</a>
-    <a href="#">Event</a>
-    <a href="#">Service</a>
-    <a href="#">About</a>
-</div>
 
   <h4>S E R V I C E</h4><br>
   <h1>WELCOME TO SERVICE PAGE</h1>
