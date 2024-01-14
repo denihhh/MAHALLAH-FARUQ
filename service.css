@@ -124,12 +124,11 @@ footer {
   text-align: center;
   z-index: 999;
 }
-
-img {
-max-width: 100%;
+.card-content img{
+  max-width: 100%;
 display: block;
-
 }
+
 
 .container {
 max-width: 99vw;
@@ -411,55 +410,4 @@ h1{
   }
 }
 
- /* Add the following styles for the navigation bar */
-  /* Add the following styles for the navigation bar */
-  .navigation-bar {
-    display: none;
-    position: absolute;
-    top: 91px; /* Adjust the top position based on your header height */
-    left: 0;
-    width: 100%;
-    background-color: #0B253C;
-    z-index: 1000;
-    text-align: center; /* Center the navigation links */
-    transition: top 0.3s ease-in-out; /* Add transition for smoother effect */
-}
-
-.navigation-bar a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    display: inline-block; /* Display links horizontally */
-    border-right: 1px solid #ffffff; /* Add a border between links */
-}
-
-.navigation-bar a:last-child {
-    border-right: none; /* Remove border for the last link */
-}
-
-/* Add the following styles for the arrow-down icon */
-.container-arrow {
-    text-align: center;
-    margin-top: 10px;
-    transition: margin-top 0.3s ease-in-out; /* Add transition for smoother effect */
-}
-
-.arrow {
-    position: relative;
-    border: solid white;
-    border-width: 0 2px 2px 0;
-    display: inline-block;
-    padding: 8px;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-}
-
-.down {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-}
-
-.up {
-    transform: rotate(-135deg);
-    -webkit-transform: rotate(-135deg);
-}
+ 
