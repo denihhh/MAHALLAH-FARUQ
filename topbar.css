@@ -136,10 +136,10 @@
 
 #notibar {
   display: none;
-  position: absolute;
+  position: fixed;
   font-size: var(--font-size-5xl);
-  top: 32%;
-  left: 15.5%;
+  top: 30%;
+  left: 13.7%;
   transform: translate(-50%, -50%);
   padding: 20px;
   background-color: #fff;
@@ -189,4 +189,64 @@
 .profilebar {
   height: 100%;
   width: 100%;
+}
+
+@media (max-width: 1070px) {  
+  .navelement {
+    top: -55px;
+  }
+  .navelement div {
+    font-size: var(--font-size-base);
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+}
+@media (max-width: 855px) {  
+  .navelement {
+    top: -50px;
+  }
+  .navelement div {
+    font-size: 14px;
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+}
+@media (max-width: 750px) {  
+  .navelement {
+    top: -55px;
+  }
+  .navelement div {
+    font-size: 16px;
+    padding-right: 3%;
+    padding-left: 3%;
+  }
+  .navcontainer img {
+    position: relative;
+    top: -25px;
+    left: 2.5%;
+    width: 95%;
+    height: 30px;
+  }
+  
+}
+@media (max-width: 695px) {  
+  .navelement div {
+    font-size: 14px;
+    padding-right: 3%;
+    padding-left: 3%;
+  }  
+}
+@media (max-width: 622px) {  
+  .navelement div {
+    font-size: 11px;
+    padding-right: 2%;
+    padding-left: 2%;
+  }  
+}
+@media (max-width: 430px) {  
+  .navelement div {
+    font-size: 10px;
+    padding-right: 2%;
+    padding-left: 2%;
+  }  
 }
