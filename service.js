@@ -120,24 +120,4 @@ function popup4() {
     }
   }
 
-  function showNavigationBar() {
-    var navigationBar = document.getElementById('navigation-bar');
-    var arrowContainer = document.getElementById('arrow-container');
-    var arrowIcon = document.getElementById('arrow-icon');
-
-    navigationBar.style.display = 'block';
-    arrowIcon.classList.add('up');
-    arrowContainer.style.marginTop = '50px'; // Adjust the margin-top as needed
-
-
-}
-
-function hideNavigationBar() {
-    var navigationBar = document.getElementById('navigation-bar');
-    var arrowContainer = document.getElementById('arrow-container');
-    var arrowIcon = document.getElementById('arrow-icon');
-
-    navigationBar.style.display = 'none';
-    arrowIcon.classList.remove('up');
-    arrowContainer.style.marginTop = '10px'; // Adjust the original margin-top as needed
-}
+  
