@@ -68,7 +68,7 @@ body {
 /* CONTENT */
 
 .box{
-    width: 1520px;
+    width: max-content;
     height: 806px;
     background-color: #D9D9D9;
     margin-left: 190px;
@@ -161,3 +161,99 @@ select:after {
 
     
 }
+
+.openbtn{
+    position: relative;
+    margin-top: 100px; /* Adjust the value as needed */
+    margin-left: 169px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    background-color: #0B253C;
+    border: 100px #000;
+    border-radius: 8px;
+    width: 200px;
+    font-family:'Source Serif Pro';
+    transition-duration: 0.4s;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    
+}
+.openbtn:hover{
+    background-color: #04AA6D; /* Green */
+    color: white;
+}
+
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    
+  }
+  
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+   
+  }
+  
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .modal-header {
+    padding: 10px 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+  }
+  
+  .modal-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .modal-body {
+    padding: 70px 100px;
+    font-size: 30px;
+   
+    
+  }
+  
+  #overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+  }
+  
+  #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
