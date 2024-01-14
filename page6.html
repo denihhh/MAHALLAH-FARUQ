@@ -17,56 +17,55 @@
 </head>
 <body>
     <!-- topbar -->
+
     <style>
       a {
 color: inherit; /* Inherit color from the parent element */
 text-decoration: none; /* Remove underline */
 }
   </style>
-  <!-- topbar -->
+ <!-- topbar -->
 
-  <header class="topbar2">
-      <img class="notilogo" onclick="toggleWindow()" src="public/notification.png" alt="notilogo">
-      <div id="notibar">
-          <p>you have no new notification!<br>-------------------------------------</p>
-          <button onclick="toggleWindow()">Close</button>
-      </div>
-      <div class="faruqsymbol"><a href="homepage.html">
-          <img class="faruqofflogo" alt="faruqlogo" src="./public/image-1@2x.png" />
-  
-          <div class="faruq">FARUQ</div>
-          <div class="faruqsymbol-child"></div>
-      </a>    
-      </div>
-      <img class="profilepic" onclick="toggleWindow2()" src="public/profile.png" alt="profilepicture">
-      <div id="profilebar">
-          <img class="profilebar" src="public/profilebar.png" alt="profilebar">
-          <hr class="profline">
-          <div class="profbarelcontain">
-              <a href="page2.html"><img class="profitem" src="public/disciplinarybut.png" alt="discipline"></a>
-              <a href="profile.html"><img class="profitem" src="public/viewprofbut.png" alt="viewprofile"></a>
-              <a href="welcomingpage.html"><img class="profitem" src="public/signoutbut.png" alt="signout"></a>
-          </div>
-      </div>
-  </header>
-  <hr class="customline">
-  <nav class="nav">
-      <img class="navarrow" src="public/navarrow.png" alt="navigation arrow">
-      <div class="navcontainer">
-          <img src="public/navbar.png" alt="">
-          <div class="navelement">
-              <div><a href="page1.html">Announcement</a></div>
-                  <div><a href="page5.html">Advertisement</a></div>
-                  <div><a href="eventpage.html">Event</a></div>
-                  <div><a href="service.html">Service</a></div>
-                  <div><a href="page6.html">Room Reg</a></div>
-                  <div><a href="page3.html">About</a></div>
+ <header class="topbar2">
+  <img class="notilogo" onclick="toggleWindow()" src="public/notification.png" alt="notilogo">
+  <div id="notibar">
+      <p>you have no new notification!<br>-------------------------------------</p>
+      <button onclick="toggleWindow()">Close</button>
+  </div>
+   <div class="faruqsymbol"><a href="homepage.html">
+        <img class="faruqofflogo" alt="faruqlogo" src="./public/image-1@2x.png" />
 
-          </div>
+        <div class="faruq">FARUQ</div>
+        <div class="faruqsymbol-child"></div>
+    </a>    
+    </div>   
+</div>
+  <img class="profilepic" onclick="toggleWindow2()" src="public/profile.png" alt="profilepicture">
+  <div id="profilebar">
+      <img class="profilebar" src="public/profilebar.png" alt="profilebar">
+      <hr class="profline">
+      <div class="profbarelcontain">
+          <a href="page2.html"><img class="profitem" src="public/disciplinarybut.png" alt="discipline"></a>
+          <a href="profile.html"><img class="profitem" src="public/viewprofbut.png" alt="viewprofile"></a>
+          <a href="welcomingpage.html"><img class="profitem" src="public/signoutbut.png" alt="signout"></a>
       </div>
-  </nav>
-
-    
+  </div>
+</header>
+<hr class="customline">
+<nav class="nav">
+  <img class="navarrow" src="public/navarrow.png" alt="navigation arrow">
+  <div class="navcontainer">
+      <img src="public/navbar.png" alt="">
+      <div class="navelement">
+          <div><a href="page1.html">Announcement</a></div>
+              <div><a href="page5.html">Advertisement</a></div>
+              <div><a href="eventpage.html">Event</a></div>
+              <div><a href="service.html">Service</a></div>
+              <div><a href="page6.html">Room Reg</a></div>
+              <div><a href="page3.html">About</a></div>
+      </div>
+  </div>
+</nav>
 
     <!-- header -->
     
@@ -87,7 +86,7 @@ text-decoration: none; /* Remove underline */
         <hr style="height:2px;border-width:0;width:93%;color:gray;background-color:#0B253C">
         <div class="box2">
             <div id="container-1">
-                <img style="padding-left: 100px;padding-top: -100px;" src="imgpg/maps2.png" height="649" width="630" alt="Center Image">
+                <img style="padding-left: 100px;padding-top: -100px;" src="imgpg/maps2.png" height="649" width="700" alt="Center Image">
             </div>
             <div id="container-2">
                 <div style="font-size: 20px;padding-top: 115px;font-weight: bold;padding-right: 20%;">LEGEND</div>
@@ -134,7 +133,21 @@ text-decoration: none; /* Remove underline */
                     
                     <!-- Add more options as needed -->
                 </select>
+                <div class = "ruangcontact">
+                  <button class="openbtn" data-modal-target="#modal">REGISTER</button>
+                  <div class="modal" id="modal">
+                    <div class="modal-header">
+                      <div style="padding-left: 180px;" class="title">Notification !</div>
+                      <button data-close-button class="close-button">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                      
+                      <div style="text-align: center;"> Your room have been registered !</div>
 
+                    </div>
+                  </div>
+                  <div id="overlay"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -170,6 +183,43 @@ text-decoration: none; /* Remove underline */
     document.getElementById('circleG').addEventListener('click', function() {
       document.getElementById('text').textContent = 'G';
     });
+
+    const openModalButtons = document.querySelectorAll('[data-modal-target]')
+const closeModalButtons = document.querySelectorAll('[data-close-button]')
+const overlay = document.getElementById('overlay')
+
+openModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = document.querySelector(button.dataset.modalTarget)
+    openModal(modal)
+  })
+})
+
+overlay.addEventListener('click', () => {
+  const modals = document.querySelectorAll('.modal.active')
+  modals.forEach(modal => {
+    closeModal(modal)
+  })
+})
+
+closeModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.modal')
+    closeModal(modal)
+  })
+})
+
+function openModal(modal) {
+  if (modal == null) return
+  modal.classList.add('active')
+  overlay.classList.add('active')
+}
+
+function closeModal(modal) {
+  if (modal == null) return
+  modal.classList.remove('active')
+  overlay.classList.remove('active')
+}
     
         
 </script>
