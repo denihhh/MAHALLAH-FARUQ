@@ -126,3 +126,62 @@ body {
 
     
 }
+@media screen and (max-width: 1200px) {
+    .box {
+        width: 90%;
+        margin-left: 5%;
+        overflow: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+
+    .image-container {
+        margin-bottom: 10px;
+    }
+
+    .box {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 50px;
+        padding: 20px;
+        box-sizing: border-box;
+        overflow: auto;
+    }
+
+    #container {
+        flex-direction: column;
+    }
+
+    #container div {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+   
+
+    .image-container {
+        margin-bottom: 10px;
+    }
+
+    .box {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 50px;
+        padding: 20px;
+        box-sizing: border-box;
+        overflow: auto;
+    }
+
+    #container {
+        flex-direction: column;
+    }
+
+    #container div {
+        margin-bottom: 10px;
+    }
+
+
+}
