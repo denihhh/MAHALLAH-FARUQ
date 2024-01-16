@@ -1,2 +1,5 @@
 # MAHALLAH-FARUQ
-Group Project Mahalllah Faruq
+Group Kroni It
+1. Danish Haikal
+2. Ahmad Nur Zafran Shah
+3. Ahmad Muizzuddin
