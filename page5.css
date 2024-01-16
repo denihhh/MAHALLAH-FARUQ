@@ -105,3 +105,51 @@ body {
 
     
 }
+
+@media screen and (min-width: 768px) {
+    .box2{
+        padding-top: 50px;
+        row-gap: 10px;
+        flex-wrap: nowrap;
+    }
+
+    #container-1, #container-2, #container-3{
+        width: 33.34%;
+        padding-left: 12%;
+        box-sizing: border-box;
+    }
+
+    .ad-container{
+        width: 100%;
+    }
+
+    .ad-img{
+        width: 100%;
+    }
+
+    .ad-details{
+        width: 300px;
+        margin-left: 0;
+    }
+}
+
+.faruqs{
+    margin-top: 70px;
+    margin-left: 96%;
+    margin-bottom: 30px;
+    
+}
+#bottom-bar {
+    background-color: #D9D9D9;
+    color: black;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    padding: 50px;
+    
+    
+
+    
+}
