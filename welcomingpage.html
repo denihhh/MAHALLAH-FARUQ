@@ -54,11 +54,11 @@
               <div class="sign-up">Sign Up</div>
             </a>
           </div>
-            <div class="login-button"><a href="login.html">
+          <div class="login-button"><a href="login.html">
               <div class="login-button-child"></div>
               <div class="login">login</div>
             </a>
-            </div>
+          </div>
         </div>
       </div>
       <div class="about-us">
@@ -159,8 +159,11 @@
       </div>
       <section class="services">
         <img src="public/service offered.png" alt="serviceoffered">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d995.8519026735787!2d101.73947929669615!3d3.2484208687830787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc38e83e2d43b3%3A0x2fee3dbfc62b32f6!2sMahallah%20Faruq!5e0!3m2!1sen!2smy!4v1705325844794!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d995.8519026735787!2d101.73947929669615!3d3.2484208687830787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc38e83e2d43b3%3A0x2fee3dbfc62b32f6!2sMahallah%20Faruq!5e0!3m2!1sen!2smy!4v1705325844794!5m2!1sen!2smy"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+
       </section>
     </main>
     <div class="faruqlogo1">
@@ -181,44 +184,9 @@
     function scrollHorizontally(event) {
       var container = document.querySelector('.featuresintro');
       var delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
-      container.scrollLeft -= delta * 20; // Adjust the scroll speed if needed
+      container.scrollLeft -= delta * 40; // Adjust the scroll speed if needed
       event.preventDefault();
     }
-
-    var locationData = {
-        "locations": [
-            {
-                "street": "Mahallah Faruq, International Islamic University Malaysia (IIUM)",
-                "adminArea6": "",
-                "adminArea6Type": "Neighborhood",
-                "adminArea5": "Gombak",
-                "adminArea5Type": "City",
-                "adminArea4": "Selangor",
-                "adminArea4Type": "State",
-                "adminArea3": "14",
-                "adminArea3Type": "Region",
-                "adminArea1": "MY",
-                "adminArea1Type": "Country",
-                "postalCode": "53100",
-                "geocodeQualityCode": "P1AAA",
-                "geocodeQuality": "POINT",
-                "dragPoint": true,
-                "sideOfStreet": "N",
-                "type": "s",
-                "latLng": {
-                    "lat": 3.2336,
-                    "lng": 101.7241
-                },
-                "displayLatLng": {
-                    "lat": 3.2336,
-                    "lng": 101.7241
-                }
-            }
-        ]
-    };
-
-    // You can use locationData in your JavaScript logic
-    console.log(locationData);
   </script>
 </body>
 
