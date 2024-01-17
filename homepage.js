@@ -44,17 +44,27 @@ image.style.display = 'block';
 
 
 function handleWheel(event) {
-        // Calculate the direction of the scroll for the pickerList
-        const direction = Math.sign(event.deltaY);
+  // Check if the event target is within .adsconholder
+  const adsconholder = document.getElementById('adsContainer'); // Use the correct ID
+  if (event.target.closest('.adsconholder')) {
+      // Update the scrollTop of .adsconholder based on the wheel event
+      adsconholder.scrollTop += event.deltaY;
+  } else {
+      // Prevent the default behavior to stop the scroll for elements other than .adsconholder
+      event.preventDefault();
 
-        // Update the selected item index
-        selectedItemIndex += direction;
+      // Calculate the direction of the scroll for the pickerList
+      const direction = Math.sign(event.deltaY);
 
-        // Ensure the index stays within the bounds of the list
-        selectedItemIndex = Math.max(0, Math.min(selectedItemIndex, pickerList.children.length - 1));
+      // Update the selected item index
+      selectedItemIndex += direction;
 
-        // Update the picker view
-        updatePicker();
+      // Ensure the index stays within the bounds of the list
+      selectedItemIndex = Math.max(0, Math.min(selectedItemIndex, pickerList.children.length - 1));
+
+      // Update the picker view
+      updatePicker();
+  }
 }
 
 // Attach the wheel event listener to the picker container
