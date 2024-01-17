@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=TT Commons:wght@400;500&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela Gothic One:wght@400&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" />
+    <script src="homepage.js"></script>
 </head>
 
 <body>
@@ -49,10 +50,11 @@
                 <div class="navcontainer">
                     <img src="public/navbar.png" alt="">
                     <div class="navelement">
+                        <div><a href="page1.html">Announcement</a></div>
                         <div><a href="page5.html">Advertisement</a></div>
                         <div><a href="eventpage.html">Event</a></div>
                         <div><a href="service.html">Service</a></div>
-                        <div><a href="page6.html">Room Reg</a></div>
+                        <div><a href="page6.html">RoomReg</a></div>
                         <div><a href="page3.html">About</a></div>
                         
                     </div>
@@ -118,87 +120,6 @@
 
     </div>
 
-    <script>
-        function toggleWindow() {
-            var modal = document.getElementById('notibar');
-            modal.style.display = (modal.style.display === 'none' || modal.style.display === '') ? 'block' : 'none';
-        }
-        function toggleWindow2() {
-            var modal = document.getElementById('profilebar');
-            modal.style.display = (modal.style.display === 'none' || modal.style.display === '') ? 'block' : 'none';
-        }
-        const pickerList = document.getElementById('pickerList');
-        let selectedItemIndex = Math.floor(pickerList.children.length / 2);
-
-        function updatePicker() {
-    // Check if the screen width is greater than 1024px
-    const isWideScreen = window.innerWidth > 1024;
-
-    // Remove 'magnified' class from all items
-    Array.from(pickerList.children).forEach((item) => {
-        item.classList.remove('magnified');
-    });
-
-    // Add 'magnified' class to the selected item
-    pickerList.children[selectedItemIndex].classList.add('magnified');
-
-    // Calculate the translation to center the selected item
-    const translateY = (pickerList.children.length / 2 - selectedItemIndex) * pickerList.children[0].clientHeight;
-    
-    // Adjust scrolling direction based on screen width
-    pickerList.style.transform = isWideScreen ? `translateY(${translateY}px)` : `translateX(${translateY}px)`;
-
-    // Hide all images
-    Array.from(document.querySelectorAll('.anbox')).forEach((modal) => {
-        modal.style.display = 'none';
-    });
-
-    // Hide all images
-    Array.from(document.querySelectorAll('.imageholder img')).forEach((image) => {
-        image.style.display = 'none';
-    });
-
-    // Show the images for the magnified text
-    const magnifiedImages = document.querySelectorAll(`.anbox${selectedItemIndex + 1} img`);
-    magnifiedImages.forEach((image) => {
-        image.style.display = 'block';
-    });
-}
-
-
-        function handleWheel(event) {
-            // Check if the event target is within .adsconholder
-            const adsconholder = document.getElementById('adsContainer'); // Use the correct ID
-            if (event.target.closest('.adsconholder')) {
-                // Update the scrollTop of .adsconholder based on the wheel event
-                adsconholder.scrollTop += event.deltaY;
-            } else {
-                // Prevent the default behavior to stop the scroll for elements other than .adsconholder
-                event.preventDefault();
-
-                // Calculate the direction of the scroll for the pickerList
-                const direction = Math.sign(event.deltaY);
-
-                // Update the selected item index
-                selectedItemIndex += direction;
-
-                // Ensure the index stays within the bounds of the list
-                selectedItemIndex = Math.max(0, Math.min(selectedItemIndex, pickerList.children.length - 1));
-
-                // Update the picker view
-                updatePicker();
-            }
-        }
-
-
-        // Attach the wheel event listener to the picker container
-        pickerList.addEventListener('wheel', handleWheel);
-
-
-
-        // Initial update to center the selected item
-        updatePicker();
-    </script>
 </body>
 
 </html>
